@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+         <style>
+          /* Style the custom select container */
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+}
+
+/* Remove default select appearance */
+.custom-select-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom arrow positioning */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent interaction with the arrow */
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease; /* Smooth rotation effect */
+}
+
+/* Rotate the arrow on focus (when dropdown is clicked) */
+.custom-select-container select:focus + .custom-arrow,
+.custom-select-container select:active + .custom-arrow {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Styling the dropdown when the user interacts */
+.custom-select-container select:hover {
+  border-color: #777;
+}
+
+.custom-select-container select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder styling */
+.custom-select-container select option[disabled] {
+  color: #888;
+}
+
+/* Adjusting padding for options */
+.custom-select-container select option {
+  padding: 10px;
+}
+
+         </style>
+</head>
+<body>
+          <div class="custom-select-container">
+                    <select name="Course" id="course-select">
+                      <option value="" selected disabled>Course</option>
+                      <option value="BCA">BCA</option>
+                      <option value="MCA">MCA</option>
+                      <option value="BBA">BBA</option>
+                      <option value="MBA">MBA</option>
+                    </select>
+                    <img src="./Pages/arrowDown.png" alt="arrow" class="custom-arrow">
+                  </div>
+                  
+                  
+                  
+                  
+</body>
+</html>
